@@ -1,6 +1,1 @@
-2,gogetcoffe,60
-3,gogetcoffe,60
-1,arey,500
-5,asdf,40
-6,coffe,20
-9,areiju,33
+1,kldj,24

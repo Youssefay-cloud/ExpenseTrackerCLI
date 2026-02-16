@@ -13,6 +13,7 @@ import java.util.*;
 import Model.Expense;
 
 public class ExpenseStorage {
+   
     private static final String fileName = "Expenses.txt";
 
     public void saveToFile(List<Expense> list){
@@ -38,8 +39,8 @@ public class ExpenseStorage {
                 int id = Integer.parseInt(parts[0]);
                 String desc = parts[1];
                 int amount = Integer.parseInt(parts[2]);
-                LocalTime time = LocalTime.now();
-                loaded.add(new Expense(id, desc, amount));
+                Expense e = new Expense(id, desc, amount);
+                loaded.add(e);
             }
         } catch (Exception e) {
             System.out.println("Error reading file.");

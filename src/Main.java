@@ -1,5 +1,6 @@
 import Services.ExpenseTracker;
 
+
 public class Main {
     public static void main(String[] args) throws Exception {
        if(args.length < 1){
@@ -10,7 +11,7 @@ public class Main {
 
        ExpenseTracker tracker = new ExpenseTracker();
        String command = args[0].toLowerCase();
-
+       
        tracker.load("Expenses.txt");
 
        try{

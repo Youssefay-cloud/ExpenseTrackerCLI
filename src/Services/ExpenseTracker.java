@@ -7,6 +7,7 @@ import Storage.ExpenseStorage;
 
 public class ExpenseTracker {
     private List<Expense> expenseslist ;
+    private List<String> jsonlist ;
     private ExpenseStorage es ;
 
     public ExpenseTracker(){
@@ -60,6 +61,24 @@ public class ExpenseTracker {
         }
         if (!found) {
             System.out.println("Expense ID " + id + "not found");
+        }
+    }
+    
+    public void Deletee(int id){
+        Iterator<Expense> it = expenseslist.iterator();
+
+        boolean found = false ;
+
+        while(it.hasNext()){
+            Expense e = it.next();
+            if(e.getId() == id){
+                it.remove();
+                found = true ;
+                System.out.println("Found it " + id);
+                break;
+            }else{
+                System.out.println("Nothing!!!!");
+            }
         }
     }
 
