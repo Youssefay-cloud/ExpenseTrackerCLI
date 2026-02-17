@@ -13,6 +13,7 @@ public class Main {
        String command = args[0].toLowerCase();
        
        tracker.load("Expenses.txt");
+       
 
        try{
        switch (command) {
