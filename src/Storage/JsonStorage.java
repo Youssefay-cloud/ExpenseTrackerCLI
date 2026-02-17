@@ -22,7 +22,7 @@ public class JsonStorage {
 
     public List<Expense> loadFromJson(String json) {
 
-        Gson gson = new GsonBuilder().create();
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
         try (BufferedReader reader = new BufferedReader(new FileReader(jsonname))) {
 

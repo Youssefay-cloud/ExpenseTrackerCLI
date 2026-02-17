@@ -4,11 +4,13 @@ import java.util.*;
 
 import Model.Expense;
 import Storage.ExpenseStorage;
+import Storage.JsonStorage;
 
 public class ExpenseTracker {
     private List<Expense> expenseslist ;
     private List<String> jsonlist ;
     private ExpenseStorage es ;
+    private JsonStorage js;
 
     public ExpenseTracker(){
         expenseslist = new ArrayList<>();
@@ -120,6 +122,24 @@ public class ExpenseTracker {
         } catch (Exception e) {
             System.out.println("Coudn't load the file");
         }
+    }
+
+    public void loadJson(String Jsonname){
+        try{
+            List<Expense> loaded = js.loadFromJson(Jsonname);
+            expenseslist.addAll(loaded);
+        }catch(Exception e){
+            System.out.println("Couldn't load!!!!!");
+        }
+    }
+
+    public void storeJson(){
+        try {
+            js.saveToJson(expenseslist);
+        } catch (Exception e) {
+            System.out.println("Coudn't save!!!!!");
+        }
+       
     }
 
 }
