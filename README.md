@@ -4,6 +4,8 @@
 
 This is a learning project for me to practice my Java skills. It is a simple command-line interface (CLI) application for tracking expenses. It allows users to add, update, delete, list, and summarize expenses. The application uses a text file and a JSON file to store and retrieve expense data.
 
+Project URL of RoadMap.sh : https://roadmap.sh/projects/expense-tracker
+
 ## Features
 
 - **Add expenses**: Add new expenses with a unique ID, description, and amount.
@@ -69,15 +71,15 @@ ExpensesTrackerCLI/
 │   ├── Storage/
 │   └── Main.class
 ├── lib/
-│   └── gson-2.10.1.jar
+│   └── gson-2.12.1.jar
 └── README.md
 ```
 
 ## Dependencies
 
 - **Gson**: For JSON serialization and deserialization.
-  - Version: 2.10.1
-  - Location: `lib/gson-2.10.1.jar`
+  - Version: 2.12.1
+  - Location: `lib/gson-2.12.1.jar`
 
 ## How it works
 
@@ -102,14 +104,3 @@ ExpensesTrackerCLI/
   ]
   ```
 - The application uses a simple command-line interface for user interaction.
-- The application uses a simple command-line interface for user interaction.
-
-**How to run**
-```bash
-java -cp bin src.Main <command> [arguments]
-```
-
-**How to build**
-```bash
-javac -d bin src/Main.java src/Model/Expense.java src/Services/ExpenseTracker.java src/Storage/ExpenseStorage.java src/Storage/JsonStorage.java
-```
