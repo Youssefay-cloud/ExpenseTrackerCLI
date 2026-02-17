@@ -1,8 +1,8 @@
 # Project : ExpensesTrackerCLI
-
+    
 ## Description
 
-This project is a simple command-line interface (CLI) application for tracking expenses. It allows users to add, update, delete, list, and summarize expenses. The application uses a text file and a JSON file to store and retrieve expense data.
+This is a learning project for me to practice my Java skills. It is a simple command-line interface (CLI) application for tracking expenses. It allows users to add, update, delete, list, and summarize expenses. The application uses a text file and a JSON file to store and retrieve expense data.
 
 ## Features
 
@@ -12,6 +12,21 @@ This project is a simple command-line interface (CLI) application for tracking e
 - **List expenses**: List all expenses.
 - **Summarize expenses**: Calculate the total amount of all expenses.
 - **Store and load data**: Save expenses to a text file and a JSON file, and load them back when the application starts.
+
+## Technologies Used
+
+- Java — Core language
+- Gson — JSON serialization/deserialization
+- File I/O — BufferedReader/BufferedWriter for text and JSON storage
+
+## What I Learned
+
+- Object-Oriented Programming (encapsulation, separation of concerns)
+- Command-line argument parsing
+- File I/O with both plain text and JSON formats
+- Using external libraries (Gson) in Java
+- Avoiding ConcurrentModificationException with iterators
+
 
 ## Usage
 
@@ -31,65 +46,7 @@ Replace `<command>` with one of the following:
 - `list`: List all expenses.
 - `summary`: Show the total amount of all expenses.
 
-### Commands
 
-#### Add
-
-```bash
-java -cp bin src.Main add <id> <desc> <amount>
-```
-
-**Arguments:**
-- `<id>`: The ID of the expense (integer).
-- `<desc>`: The description of the expense (string).
-- `<amount>`: The amount of the expense (integer).
-
-**Example:**
-```bash
-java -cp bin src.Main add 1 "Groceries" 50
-```
-
-#### Update
-
-```bash
-java -cp bin src.Main update <id> <desc> <amount>
-```
-
-**Arguments:**
-- `<id>`: The ID of the expense to update (integer).
-- `<desc>`: The new description of the expense (string).
-- `<amount>`: The new amount of the expense (integer).
-
-**Example:**
-```bash
-java -cp bin src.Main update 1 "Groceries" 75
-```
-
-#### Delete
-
-```bash
-java -cp bin src.Main delete <id>
-```
-
-**Arguments:**
-- `<id>`: The ID of the expense to delete (integer).
-
-**Example:**
-```bash
-java -cp bin src.Main delete 1
-```
-
-#### List
-
-```bash
-java -cp bin src.Main list
-```
-
-#### Summary
-
-```bash
-java -cp bin src.Main summary
-```
 
 ## File Structure
 
