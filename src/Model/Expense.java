@@ -7,12 +7,12 @@ public class Expense{
     private int id ;
     private String desc;
     private int amount ;
-    private LocalTime time ;
+    
     public Expense(int id, String desc, int amount) {
         this.id = id;
         this.desc = desc;
         this.amount = amount;
-        time = LocalTime.now() ;
+        
     }
     public int getId() {
         return id;
@@ -35,7 +35,7 @@ public class Expense{
     }
     @Override
     public String toString() {
-        return "Expense [ id = " + id + ", desc = " + desc + ", amount = " + amount +","+time+ " ] ";
+        return "Expense [ id = " + id + ", desc = " + desc + ", amount = " + amount + " ] ";
     }
 
     

@@ -26,7 +26,8 @@ public class JsonStorage {
 
         try (BufferedReader reader = new BufferedReader(new FileReader(jsonname))) {
 
-            Type typelist = new TypeToken<List<Expense>>(){}.getType();
+            Type typelist = new TypeToken<List<Expense>>() {
+            }.getType();
 
             List<Expense> expenses = gson.fromJson(reader, typelist);
 
@@ -45,11 +46,12 @@ public class JsonStorage {
 
     public void saveToJson(List<Expense> list) {
 
-        Gson gson = new GsonBuilder().create();
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(jsonname))) {
 
-            gson.toJson(list, writer);
+            String jsonString = gson.toJson(list);
+            writer.write(jsonString);
 
             System.out.println("The list have been added");
         } catch (IOException e) {

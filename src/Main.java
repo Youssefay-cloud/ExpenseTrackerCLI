@@ -13,7 +13,7 @@ public class Main {
        String command = args[0].toLowerCase();
        
        tracker.load("Expenses.txt");
-       tracker.loadJson("Expense.json");
+       tracker.loadJson("Expens.json");
        
 
        try{
