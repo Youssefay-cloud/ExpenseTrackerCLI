@@ -13,6 +13,7 @@ public class Main {
        String command = args[0].toLowerCase();
        
        tracker.load("Expenses.txt");
+       tracker.loadJson("Expense.json");
        
 
        try{
@@ -20,14 +21,17 @@ public class Main {
         case "add":
             handleAdd(tracker, args);
             tracker.store();
+            tracker.storeJson();
                 break; 
         case "update":
             handleUpdate(tracker, args);
-            tracker.store();    
+            tracker.store();
+            tracker.storeJson();    
                 break;
         case "delete":
             handledelete(tracker, args);
             tracker.store();
+            tracker.storeJson();
                 break;
         case "list":
             tracker.list();
