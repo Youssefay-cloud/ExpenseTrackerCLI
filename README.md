@@ -4,6 +4,8 @@
 
 This project is a simple command-line interface (CLI) application for tracking expenses. It allows users to add, update, delete, list, and summarize expenses. The application uses a text file and a JSON file to store and retrieve expense data.
 
+Project URL of RoadMap.sh : https://roadmap.sh/projects/expense-tracker
+
 ## Features
 
 - **Add expenses**: Add new expenses with a unique ID, description, and amount.
