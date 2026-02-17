@@ -147,12 +147,12 @@ ExpensesTrackerCLI/
 - The application uses a simple command-line interface for user interaction.
 - The application uses a simple command-line interface for user interaction.
 
-** How to run **
+**How to run**
 ```bash
 java -cp bin src.Main <command> [arguments]
 ```
 
-** How to build **
+**How to build**
 ```bash
 javac -d bin src/Main.java src/Model/Expense.java src/Services/ExpenseTracker.java src/Storage/ExpenseStorage.java src/Storage/JsonStorage.java
 ```
